@@ -1,9 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using WorkLogger.Models;
+﻿using WorkLogger.Models;
 
 Console.WriteLine("Hello, World!");
-
+// TODO: Container class.
+// TODO: Read json file.
+// TODO: Export to excel/csv/whatever.
 var shift = new Shift();
 shift.Start();
 Thread.Sleep(50000);
