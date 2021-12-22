@@ -1,12 +1,12 @@
 ﻿namespace WorkLogger.Models;
 
-public class Shift
+public class TimeUnitOfWork
 {
     private DateTime StartTime { get; set; }
     private DateTime EndTime { get; set; }
     private TimeSpan TimeWorked { get; set; }
     private string? Message { get; set; }
-
+    
     public void Start()
     {
         StartTime = DateTime.UtcNow;
