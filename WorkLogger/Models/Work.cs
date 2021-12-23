@@ -1,5 +1,3 @@
-using System.ComponentModel;
-
 namespace WorkLogger.Models;
 
 public class Work : Project
@@ -33,7 +31,7 @@ public class Work : Project
     public override string ToString()
     {
         return
-            $"Company: {base.Company}; Project: {base.Name}; Time Worked: {base.Time}; Left of budget: {Budget - base.Time}";
+            $"Company: {Company}; Project: {Name}; Time Worked: {Time}; Left of budget: {new TimeSpan(0, Budget, 0, 0) - Time}";
     }
 
     public new void Start()

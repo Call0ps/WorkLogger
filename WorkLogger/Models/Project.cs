@@ -2,11 +2,12 @@ namespace WorkLogger.Models;
 
 public class Project
 {
+    private TimeUnitOfWork _current = new TimeUnitOfWork();
+
     /// <summary>
     /// New work project
     /// </summary>
     /// <param name="projectName"></param>
-    /// <param name="budget"></param>
     /// <param name="company"></param>
     protected Project(string projectName, string company)
     {
@@ -28,17 +29,16 @@ public class Project
         Company = company;
     }
 
-    protected double Time
+    protected TimeSpan Time
     {
         get
         {
             TimeSpan time = TimeSpan.Zero;
             UnitOfWorks.ForEach(t => time += t.GetEnd() - t.GetStart());
-            return time.TotalHours;
+            return time;
         }
     }
 
-    private TimeUnitOfWork _current = new TimeUnitOfWork();
     private List<TimeUnitOfWork> UnitOfWorks { get; set; }
     protected string Name { get; set; }
     protected string Company { get; set; }
