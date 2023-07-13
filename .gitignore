@@ -1,0 +1,20 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+# Rider ignored files
+/.idea/contentModel.xml
+/.idea/projectSettingsUpdater.xml
+/.idea/modules.xml
+/.idea/.idea.WorkLogger.iml
+.idea/*
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+/.vs
